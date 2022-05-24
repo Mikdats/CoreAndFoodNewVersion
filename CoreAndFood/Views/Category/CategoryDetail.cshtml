@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewData["Title"] = "CategoryDetail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<br />
+<h2>@ViewBag.value2 Category</h2>
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Stock</th>
+        <th>Description</th>
+    </tr>
+    @foreach(var x in @ViewBag.value)
+    {
+     <tr>
+        <td>@x.FoodID</td>
+        <td>@x.Name</td>
+        <td>@x.Price</td>
+        <td>@x.Stock</td>
+        <td>@x.Description</td>
+     </tr>
+    }
+</table>
+
